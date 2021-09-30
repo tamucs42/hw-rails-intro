@@ -6,9 +6,19 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th>Movie Title</th>
+      <th class="highlight_header('title')">       
+        <%= link_to "Movie Title",                         # Sort movies by title # class="hilite" #:class => ['hilite', 'p-3 mb-2 bg-warning text-dark']
+          movies_path(params.merge(:sort => 'title')),
+          :id => "title_header",
+          :class => "#{'hilite p-3 mb-2 bg-warning text-dark' if params[:sort]=='title'}"%>
+      </th> 
       <th>Rating</th>
-      <th>Release Date</th>
+      <th class="highlight_header('date')">
+        <%= link_to "Release Date",                       # Sort by release date # class="hilite"
+          movies_path(params.merge(:sort => 'date')),
+          :id => "release_date_header",
+          :class => "#{'hilite p-3 mb-2 bg-warning text-dark' if params[:sort]=='date'}"%>
+      </th>
       <th>More Info</th>
     </tr>
   </thead>

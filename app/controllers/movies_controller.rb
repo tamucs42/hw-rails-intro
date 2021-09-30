@@ -8,6 +8,26 @@ class MoviesController < ApplicationController
   
     def index
       @movies = Movie.all
+      
+      # Update curr session
+      session[:sort] = params[:sort]
+      
+      # Sort asc by movie title or release date from app/views/movies/index.html.erb
+      #if params.has_key?(:sort)
+        #redirect_to movies_path
+      #end
+      if params[:sort] == 'date'
+        @movies = Movie.all.order(:release_date)
+      elsif params[:sort] == 'title'
+        @movies = Movie.all.order(:title)
+      end
+        
+    end
+    
+    def hilight_header
+      if session[:sort] == 'date' or session[:sort] == 'title'
+        return 'hilite'
+      end
     end
   
     def new
