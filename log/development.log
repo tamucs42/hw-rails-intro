@@ -3233,3 +3233,681 @@ DEPRECATION WARNING: Calling URL helpers with string keys controller, action is 
   Rendered movies/index.html.erb within layouts/application (10.4ms)
   Rendered layouts/_flash.erb (0.4ms)
 Completed 200 OK in 206ms (Views: 197.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 02:41:25 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 202ms (Views: 192.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 02:41:29 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BG%5D=1&sort=title&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 02:41:32 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"G"=>"1"}, "sort"=>"title", "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BG%5D=1&sort=date&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 02:41:36 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"G"=>"1"}, "sort"=>"date", "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BG%5D=1&sort=title&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 02:41:39 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"G"=>"1"}, "sort"=>"title", "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 02:41:45 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG')[0m
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BG%5D=1&ratings%5BPG%5D=1&sort=title&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 02:41:47 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"G"=>"1", "PG"=>"1"}, "sort"=>"title", "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BG%5D=1&ratings%5BPG%5D=1&sort=date&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 02:41:51 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"G"=>"1", "PG"=>"1"}, "sort"=>"date", "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 02:42:00 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2567079828940230484_27020200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 02:45:32 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:67: syntax error, unexpected end-of-input, expecting end):
+  app/views/movies/index.html.erb:67: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 02:45:56 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1130530904890998219_37348360 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1130530904890998219_37348360 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 204ms (Views: 195.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?action=index&controller=movies&sort=date" for 185.247.70.37 at 2021-10-01 02:46:03 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"date"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1130530904890998219_37348360 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 02:46:06 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1130530904890998219_37348360 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1130530904890998219_37348360 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BR%5D=1&sort=date&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 02:46:09 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"R"=>"1"}, "sort"=>"date", "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1130530904890998219_37348360 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 03:29:42 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2441360641464894149_28900200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2441360641464894149_28900200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 225ms (Views: 213.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 03:29:54 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2441360641464894149_28900200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2441360641464894149_28900200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=date&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:29:56 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"date", "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2441360641464894149_28900200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:29:58 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title", "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2441360641464894149_28900200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 185.247.70.37 at 2021-10-01 03:30:08 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2441360641464894149_28900200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb___2441360641464894149_28900200 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 03:39:13 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1144448953234378939_27994620 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1144448953234378939_27994620 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 200ms (Views: 191.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 03:39:19 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1144448953234378939_27994620 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1144448953234378939_27994620 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')[0m
+  Rendered movies/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 185.247.70.37 at 2021-10-01 03:39:23 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1144448953234378939_27994620 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1144448953234378939_27994620 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 03:41:23 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__31000439076235837_30861440 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__31000439076235837_30861440 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 205ms (Views: 195.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 03:41:28 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__31000439076235837_30861440 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__31000439076235837_30861440 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG-13', 'R')[0m
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 185.247.70.37 at 2021-10-01 03:41:31 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__31000439076235837_30861440 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__31000439076235837_30861440 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 03:54:11 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1979647574820364989_27262000 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1979647574820364989_27262000 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 205ms (Views: 195.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 03:54:16 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:16 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:17 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:17 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:17 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:17 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:17 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 03:54:18 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:23)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&commit=Refresh&controller=movies&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 03:56:54 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:54 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:54 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:54 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:54 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:55 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:56 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?action=index&controller=movies" for 185.247.70.37 at 2021-10-01 03:56:56 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from index at /home/ec2-user/environment/hw-rails-intro/app/controllers/movies_controller.rb:51)
+Redirected to https://5f5c4ac727fb485bb3970ab9aeb685d9.vfs.cloud9.us-east-2.amazonaws.com/movies?action=index&controller=movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 03:57:16 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1324170280032228312_30418540 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__1324170280032228312_30418540 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 209ms (Views: 199.6ms | ActiveRecord: 0.5ms)

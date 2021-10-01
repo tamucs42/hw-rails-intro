@@ -11,7 +11,10 @@ class MoviesController < ApplicationController
       @all_ratings = ['G','PG','PG-13','R']
       
       # Update curr session
-      session[:sort] = params[:sort]
+      if params.has_key?(:sort) or params.has_key?(:ratings)
+        session[:sort] = params[:sort]
+        session[:ratings] = params[:ratings]
+      end
       
       # Update checkbox ratings
       if params.has_key?(:ratings)
@@ -30,7 +33,7 @@ class MoviesController < ApplicationController
       elsif params[:sort] == 'title'
         @movies = Movie.where(rating: selected_ratings).order(:title)
         #@title_header = 'hilite p-3 mb-2 bg-warning text-dark'
-      elsif !params.has_key?(:ratings)
+      elsif !params.has_key?(:ratings) and !session.has_key?(:ratings) #brand new session, show all movies
         @movies = Movie.all.where(rating: selected_ratings)
       else
         @movies = Movie.where(rating: selected_ratings)
