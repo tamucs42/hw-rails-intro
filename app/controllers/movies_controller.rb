@@ -11,8 +11,8 @@ class MoviesController < ApplicationController
       @all_ratings = ['G','PG','PG-13','R']
       
       # Update curr session
-      if params.has_key?(:sort) or params.has_key?(:ratings)
-        session[:sort] = params[:sort]
+      if params.has_key?(:order) or params.has_key?(:ratings)
+        session[:order] = params[:order]
         session[:ratings] = params[:ratings]
       end
       
@@ -24,13 +24,13 @@ class MoviesController < ApplicationController
       end
       
       # Sort asc by movie title or release date from app/views/movies/index.html.erb
-      #if params.has_key?(:sort)
+      #if params.has_key?(:order)
         #redirect_to movies_path
       #end
-      if params[:sort] == 'date'
+      if params[:order] == 'date'
         @movies = Movie.where(rating: selected_ratings).order(:release_date)
         #@release_date_header = 'hilite p-3 mb-2 bg-warning text-dark'
-      elsif params[:sort] == 'title'
+      elsif params[:order] == 'title'
         @movies = Movie.where(rating: selected_ratings).order(:title)
         #@title_header = 'hilite p-3 mb-2 bg-warning text-dark'
       elsif !params.has_key?(:ratings) and !session.has_key?(:ratings) #brand new session, show all movies

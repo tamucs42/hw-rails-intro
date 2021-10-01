@@ -3911,3 +3911,49 @@ DEPRECATION WARNING: Calling URL helpers with string keys controller, action is 
   Rendered movies/index.html.erb within layouts/application (12.2ms)
   Rendered layouts/_flash.erb (0.4ms)
 Completed 200 OK in 209ms (Views: 199.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 185.247.70.37 at 2021-10-01 04:02:03 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__3969895848525294880_37830040 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__3969895848525294880_37830040 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 208ms (Views: 199.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 185.247.70.37 at 2021-10-01 04:02:07 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__3969895848525294880_37830040 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+DEPRECATION WARNING: Calling URL helpers with string keys controller, action is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__3969895848525294880_37830040 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&order=date&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 04:02:10 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "order"=>"date", "ratings"=>{"R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__3969895848525294880_37830040 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:26)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?action=index&commit=Refresh&controller=movies&order=title&ratings%5BR%5D=1&utf8=%E2%9C%93" for 185.247.70.37 at 2021-10-01 04:02:12 +0000
+Cannot render console from 185.247.70.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"commit"=>"Refresh", "order"=>"title", "ratings"=>{"R"=>"1"}, "utf8"=>"✓"}
+DEPRECATION WARNING: Calling URL helpers with string keys action, controller is deprecated. Use symbols instead. (called from _app_views_movies_index_html_erb__3969895848525294880_37830040 at /home/ec2-user/environment/hw-rails-intro/app/views/movies/index.html.erb:36)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)

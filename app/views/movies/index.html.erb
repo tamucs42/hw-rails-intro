@@ -18,22 +18,22 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <% if params[:sort] == 'title' %>
+      <% if params[:order] == 'title' %>
         <th class='hilite p-3 mb-2 bg-warning text-dark'>Movie Title</th>
       <% else %>
         <th>
-        <%= link_to "Movie Title",                         # :class => "#{'hilite p-3 mb-2 bg-warning text-dark' if params[:sort]=='title'}"
-          movies_path(params.merge(:sort => 'title')),
+        <%= link_to "Movie Title",                         # :class => "#{'hilite p-3 mb-2 bg-warning text-dark' if params[:order]=='title'}"
+          movies_path(params.merge(:order => 'title')),
           :id => "title_header"%>
         </th> 
       <% end %>
       <th>Rating</th>
-      <% if params[:sort] == 'date' %>
+      <% if params[:order] == 'date' %>
         <th class='hilite p-3 mb-2 bg-warning text-dark'>Release Date</th>
       <% else %>
         <th>
-        <%= link_to "Release Date",                         # :class => "#{'hilite p-3 mb-2 bg-warning text-dark' if params[:sort]=='title'}"
-          movies_path(params.merge(:sort => 'date')),
+        <%= link_to "Release Date",                         # :class => "#{'hilite p-3 mb-2 bg-warning text-dark' if params[:order]=='title'}"
+          movies_path(params.merge(:order => 'date')),
           :id => "release_date_header"%>
         </th> 
       <% end %>
