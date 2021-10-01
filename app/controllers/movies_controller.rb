@@ -8,26 +8,34 @@ class MoviesController < ApplicationController
   
     def index
       @movies = Movie.all
+      @all_ratings = ['G','PG','PG-13','R']
       
       # Update curr session
       session[:sort] = params[:sort]
+      
+      # Update checkbox ratings
+      if params.has_key?(:ratings)
+        selected_ratings = params[:ratings].keys()
+      else
+        selected_ratings = @all_ratings
+      end
       
       # Sort asc by movie title or release date from app/views/movies/index.html.erb
       #if params.has_key?(:sort)
         #redirect_to movies_path
       #end
       if params[:sort] == 'date'
-        @movies = Movie.all.order(:release_date)
+        @movies = Movie.where(rating: selected_ratings).order(:release_date)
+        #@release_date_header = 'hilite p-3 mb-2 bg-warning text-dark'
       elsif params[:sort] == 'title'
-        @movies = Movie.all.order(:title)
+        @movies = Movie.where(rating: selected_ratings).order(:title)
+        #@title_header = 'hilite p-3 mb-2 bg-warning text-dark'
+      elsif !params.has_key?(:ratings)
+        @movies = Movie.all.where(rating: selected_ratings)
+      else
+        @movies = Movie.where(rating: selected_ratings)
       end
         
-    end
-    
-    def hilight_header
-      if session[:sort] == 'date' or session[:sort] == 'title'
-        return 'hilite'
-      end
     end
   
     def new
